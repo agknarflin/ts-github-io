@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1110" viewBox="0 0 1300 1110" role="img" aria-labelledby="t d">
+<title id="t">MIPS Embedded System Development Roadmap</title>
+<desc id="d">Nine phases from reading documentation to production hardening, laid out along a winding road.</desc>
+<defs><filter id="sh" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1b2433" flood-opacity="0.15"/></filter></defs>
+<rect width="1300" height="1110" fill="#F7F8FA"/>
+<text x="70" y="62" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2433">MIPS Embedded System Development Roadmap</text>
+<text x="70" y="94" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#5A6475">From datasheet to production: each phase builds on a proven milestone from the one before.</text>
+<path d="M 70 271 H 1230 Q 1265 271 1265 306 V 556 Q 1265 591 1230 591 H 70 Q 35 591 35 626 V 876 Q 35 911 70 911 H 1250" fill="none" stroke="#C9CED6" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 70 271 H 1230 Q 1265 271 1265 306 V 556 Q 1265 591 1230 591 H 70 Q 35 591 35 626 V 876 Q 35 911 70 911 H 1250" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="14 12"/>
+<g transform="translate(1262,911)"><line x1="0" y1="18" x2="0" y2="-34" stroke="#1B2433" stroke-width="3"/><path d="M0 -34 L24 -26 L0 -18 Z" fill="#2E7D4F"/></g>
+<g transform="translate(70,140)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#3B5B92" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#3B5B92"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#3B5B92">0</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 0 · FOUNDATION</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Study the Docs</text>
+<circle cx="24" cy="81" r="3.2" fill="#3B5B92"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">ISA version: MIPS32 r2 vs r6, endianness</text>
+<circle cx="24" cy="108" r="3.2" fill="#3B5B92"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Core manual: CP0, caches, TLB, hazards</text>
+<circle cx="24" cy="135" r="3.2" fill="#3B5B92"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">SoC manual: memory map, IRQ ctrl, clocks</text>
+<circle cx="24" cy="162" r="3.2" fill="#3B5B92"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Errata + vendor BSP as reference</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#E6ECF6"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#3B5B92"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#3B5B92">Memory map &amp; boot flow understood</text>
+</g>
+<g transform="translate(470,140)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#3B5B92" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#3B5B92"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#3B5B92">1</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 1 · FOUNDATION</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Toolchain</text>
+<circle cx="24" cy="81" r="3.2" fill="#3B5B92"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Cross GCC / Clang (mips-mti-elf, -EL/-EB)</text>
+<circle cx="24" cy="108" r="3.2" fill="#3B5B92"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">binutils, newlib / picolibc</text>
+<circle cx="24" cy="135" r="3.2" fill="#3B5B92"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">GDB + OpenOCD over EJTAG</text>
+<circle cx="24" cy="162" r="3.2" fill="#3B5B92"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">QEMU Malta for pre-silicon testing</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#E6ECF6"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#3B5B92"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#3B5B92">Correct ELF builds &amp; disassembles</text>
+</g>
+<g transform="translate(870,140)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#1F7A7A" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#1F7A7A"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1F7A7A">2</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 2 · BRING-UP</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Bare-metal Bring-up</text>
+<circle cx="24" cy="81" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">start.S at 0xBFC00000 (kseg1, uncached)</text>
+<circle cx="24" cy="108" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">CP0 Status, watchdog off, SRAM stack</text>
+<circle cx="24" cy="135" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Polled UART "hello" — first lifeline</text>
+<circle cx="24" cy="162" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">PLL + DDR init, linker script</text>
+<circle cx="24" cy="189" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="194" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">crt0: copy .data, zero .bss → main()</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#E1F2F1"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#1F7A7A"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1F7A7A">C runs from DDR and prints</text>
+</g>
+<g transform="translate(870,460)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#1F7A7A" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#1F7A7A"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#1F7A7A">3</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 3 · BRING-UP</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Caches &amp; Memory</text>
+<circle cx="24" cy="81" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Read Config1/2: line size, sets, ways</text>
+<circle cx="24" cy="108" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Index_Store_Tag init → jump to kseg0</text>
+<circle cx="24" cy="135" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">wback / inv / sync ranges for DMA</text>
+<circle cx="24" cy="162" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">sync barriers; TLB refill if MMU used</text>
+<circle cx="24" cy="189" r="3.2" fill="#1F7A7A"/>
+<text x="36" y="194" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Exception handler: Cause/EPC dump</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#E1F2F1"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#1F7A7A"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1F7A7A">Cached execution + crash dump</text>
+</g>
+<g transform="translate(470,460)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#B5651D" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#B5651D"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#B5651D">4</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 4 · RUNTIME</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Interrupts, Timer, Locks</text>
+<circle cx="24" cy="81" r="3.2" fill="#B5651D"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Save context, decode Cause, eret</text>
+<circle cx="24" cy="108" r="3.2" fill="#B5651D"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Legacy / Vectored / EIC (GIC) dispatch</text>
+<circle cx="24" cy="135" r="3.2" fill="#B5651D"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Count/Compare system tick (IP7)</text>
+<circle cx="24" cy="162" r="3.2" fill="#B5651D"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">LL/SC atomics, spinlocks, irqsave</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#FBEEE2"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#B5651D"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#B5651D">1 kHz tick + UART RX interrupt</text>
+</g>
+<g transform="translate(70,460)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#B5651D" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#B5651D"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#B5651D">5</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 5 · RUNTIME</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Core Libraries</text>
+<circle cx="24" cy="81" r="3.2" fill="#B5651D"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Intrusive lists, ring buffers</text>
+<circle cx="24" cy="108" r="3.2" fill="#B5651D"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Bitmaps + clz for schedulers</text>
+<circle cx="24" cy="135" r="3.2" fill="#B5651D"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Memory pools, TLSF heap</text>
+<circle cx="24" cy="162" r="3.2" fill="#B5651D"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Timer wheel, printf, endian helpers</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#FBEEE2"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#B5651D"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#B5651D">Unit-tested on host PC</text>
+</g>
+<g transform="translate(70,780)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#6B4C9A" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#6B4C9A"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#6B4C9A">6</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 6 · SYSTEM</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">OS Port</text>
+<circle cx="24" cy="81" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Pick: loop / FreeRTOS / Zephyr / Linux</text>
+<circle cx="24" cy="108" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Context layout: GPRs, hi/lo, EPC, Status</text>
+<circle cx="24" cy="135" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Tick ISR → scheduler</text>
+<circle cx="24" cy="162" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Yield via software IRQ (IP0/IP1)</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#EFE8F7"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#6B4C9A"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6B4C9A">Tasks preempt reliably</text>
+</g>
+<g transform="translate(470,780)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#6B4C9A" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#6B4C9A"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#6B4C9A">7</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 7 · SYSTEM</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Drivers &amp; SDK</text>
+<circle cx="24" cy="81" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">GPIO, UART, SPI/I²C, DMA, Eth/USB</text>
+<circle cx="24" cy="108" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">HAL API above register layer</text>
+<circle cx="24" cy="135" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">ROM → SPL → U-Boot, OTA / A-B images</text>
+<circle cx="24" cy="162" r="3.2" fill="#6B4C9A"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">SDK package + CI (QEMU + HIL board)</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#EFE8F7"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#6B4C9A"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6B4C9A">SDK v1.0 released</text>
+</g>
+<g transform="translate(870,780)">
+<rect width="360" height="262" rx="14" fill="#FFFFFF" stroke="#2E7D4F" stroke-width="1.5" filter="url(#sh)"/>
+<path d="M0 14 A14 14 0 0 1 14 0 H346 A14 14 0 0 1 360 14 V56 H0 Z" fill="#2E7D4F"/>
+<circle cx="30" cy="28" r="16" fill="#FFFFFF"/>
+<text x="30" y="34" text-anchor="middle" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#2E7D4F">8</text>
+<text x="56" y="25" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.2" fill="#FFFFFF" fill-opacity="0.85">PHASE 8 · PRODUCTION</text>
+<text x="56" y="45" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Harden &amp; Optimize</text>
+<circle cx="24" cy="81" r="3.2" fill="#2E7D4F"/>
+<text x="36" y="86" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Perf counters, cache/scratchpad tuning</text>
+<circle cx="24" cy="108" r="3.2" fill="#2E7D4F"/>
+<text x="36" y="113" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">wait-based idle, clock gating</text>
+<circle cx="24" cy="135" r="3.2" fill="#2E7D4F"/>
+<text x="36" y="140" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Watchdog, stack guards, crash logs</text>
+<circle cx="24" cy="162" r="3.2" fill="#2E7D4F"/>
+<text x="36" y="167" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Secure boot, EJTAG lockdown</text>
+<rect x="14" y="212" width="332" height="36" rx="18" fill="#E3F3E9"/>
+<path d="M34 230 l7 -7 l7 7 l-7 7 z" fill="#2E7D4F"/>
+<text x="56" y="235" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#2E7D4F">Production ready</text>
+</g>
+<text x="70" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#5A6475">Stages:</text>
+<rect x="140" y="1070" width="16" height="16" rx="4" fill="#3B5B92"/>
+<text x="164" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Foundation</text>
+<rect x="284" y="1070" width="16" height="16" rx="4" fill="#1F7A7A"/>
+<text x="308" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Bring-up</text>
+<rect x="412" y="1070" width="16" height="16" rx="4" fill="#B5651D"/>
+<text x="436" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Runtime</text>
+<rect x="532" y="1070" width="16" height="16" rx="4" fill="#6B4C9A"/>
+<text x="556" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">System</text>
+<rect x="644" y="1070" width="16" height="16" rx="4" fill="#2E7D4F"/>
+<text x="668" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">Production</text>
+<path d="M808 1071 l7 -7 l7 7 l-7 7 z" transform="translate(0,7)" fill="#5A6475"/>
+<text x="830" y="1083" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#2B3445">= milestone that gates the next phase</text>
+</svg>
